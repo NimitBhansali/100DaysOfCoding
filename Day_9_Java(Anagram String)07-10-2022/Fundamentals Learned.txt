@@ -1,0 +1,26 @@
+Started Learning Basic Fundamentals of java for self learning
+#  Java Basics  
+ Class: The class is a blueprint (plan) of the instance of a class (object). It can be defined as a template that describes the data and behaviour associated with its instance.
+    	Example: Blueprint of the house is class.
+      Syntax -
+          class FirstClass {
+              //Statements
+          }
+
+Object: The object is an instance of a class. It is an entity that has behaviour and state.
+      	Example: A car is an object whose states are: brand, colour, and number plate.
+        Behaviour: Running on the road.
+        Method: The behaviour of an object is the method.
+        Instance variables: Every object has its own unique set of instance variables. The state of an object is generally created by the values that are assigned to these instance variables.
+Comments in Java
+There are three types of comments in Java. 
+  -Single line Comment
+      // System.out.println("SIngle");
+  -Multi-line Comment
+      /*  for (i=0;i<10;i++)
+          System.out.println("CAN BE AnYThing in B/w");
+      */
+  -Documentation Comment. Also called a doc comment.
+      ***When the class is public, the name of the file has to be the class name.***
+
+Note- Java is Case Sensitive i.e.. identifiers AB, Ab, aB, and ab are different in Java.
