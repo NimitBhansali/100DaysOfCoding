@@ -1,0 +1,21 @@
+Naming Convention in java-
+
+Class Names
+- The first letter of the class should be in Uppercase (lowercase is allowed ,   but discouraged).
+- If several words are used to form the name of the class, each inner word’s first letter should be in Uppercase. Underscores are allowed, but not recommended. Also allowed are numbers and currency symbols, although the latter are also discouraged because they are used for a special purpose.
+
+
+Method Name
+-Method names start with lower case letter.
+-If several words are used to form the name of the method, then each first letter of the inner word should be in Uppercase. Underscores are allowed, but not recommended. Also allowed are digits and currency symbols.
+
+Identifiers in java
+Identifiers are the names of local variables, instance and class variables, and labels, but also the names for classes and methods. All Unicode characters are valid.
+- All identifiers can begin with a letter, a currency symbol or an underscore (_). According to the convention, a letter should be lower case for variables.
+- The first character of identifiers can be followed by any combination of letters, digits, currency symbols and the underscore. The underscore is not recommended for the names of variables. Constants (static final attributes and enums) should be in all Uppercase letters.
+- Most importantly identifiers are case-sensitive.
+- A keyword cannot be used as an identifier since it is a reserved word and has some special meaning.
+
+ Access Modifiers: These modifiers control the scope of class and methods.
+•	Access Modifiers: default, public, protected, private
+•	Non-access Modifiers: final, abstract, strictfp.
