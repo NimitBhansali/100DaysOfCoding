@@ -1,0 +1,12 @@
+BIG INTEGER--------------
+Immutable arbitrary-precision integers. All operations behave as if BigIntegers were represented in two's-complement notation (like Java's primitive integer types). BigInteger provides analogues to all of Java's primitive integer operators, and all relevant methods from java.lang.Math. Additionally, BigInteger provides operations for modular arithmetic, GCD calculation, primality testing, prime generation, bit manipulation, and a few other miscellaneous operations.
+Initialization of big int-
+A  = BigInteger.valueOf(54);
+B  = BigInteger.valueOf(37);
+And for Integers available as strings you can initialize them as follows:
+A  = new BigInteger(“54”);
+B  = new BigInteger(“123456789123456789”); 
+Other similar functions are subtract(), multiply(), divide(), remainder(), but all these functions take BigInteger as their argument so if we want this operation with integers or string convert them to BigInteger before passing them to functions
+Comparison 
+if (A.compareTo(B) < 0)  {} 
+Actually compareTo returns -1(less than), 0(Equal), 1(greater than) according to values. 
