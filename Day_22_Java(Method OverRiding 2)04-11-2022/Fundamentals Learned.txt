@@ -1,0 +1,15 @@
+---------------Super KeyWord---------------
+The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+Usage of Java super Keyword
+1.	super can be used to refer immediate parent class instance variable.
+2.	super can be used to invoke immediate parent class method.
+3.	super() can be used to invoke immediate parent class constructor.
+
+---------Constructor in Java-------------
+Whenever we use new keyword to create an instance of a class, the constructor is invoked and the object of the class is returned. Since constructor can only return the object to class, it’s implicitly done by java runtime and we are not supposed to add a return type to it. If we add a return type to a constructor, then it will become a method of the class. This is the way java runtime distinguish between a normal method and a constructor. Let’s assume we have following code in Employee class.
+Types of Constructor in Java
+There are three types of constructor in java.
+1.	Default Constructor
+2.	No-Args constructor
+3.	Parameterized constructor
