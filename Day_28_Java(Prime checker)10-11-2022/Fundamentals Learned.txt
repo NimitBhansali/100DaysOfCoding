@@ -1,0 +1,11 @@
+--------isProbablePrime()---------
+  The java.math.BigInteger.isProbablePrime(int certainty) method is used to tell if this BigInteger is probably prime or if it’s definitely composite. 
+  This method checks for prime or composite upon the current BigInteger by which this method is called and returns a boolean value. It returns true if this BigInteger is probably prime, false if it’s definitely composite. If certainty is <= 0, true is returned.
+Syntax:
+   public boolean isProbablePrime(int certainty)
+Parameters: 
+   This method accepts a mandatory parameter certainty which is a measure of the uncertainty that is acceptable to the user.
+   This is due to the fact the BigInteger is a very very large number and finding exactly if it is prime is very difficult and expensive. Hence it can be said that this method checks for the prime of this BigInteger based on a threshold value (1 – 1/2certainty).
+Return Value: 
+   This method returns a boolean value stating whether this BigInteger is prime or not.
+   It returns true if this BigInteger is probably prime, false if it’s definitely composite.
