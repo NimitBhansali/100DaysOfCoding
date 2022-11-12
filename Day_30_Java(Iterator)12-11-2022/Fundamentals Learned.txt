@@ -1,0 +1,16 @@
+--------------Iterators--------------
+Iterators in Java are used in the Collection framework to retrieve elements one by one. It is a universal iterator as we can apply it to any Collection object. By using Iterator, we can perform both read and remove operations. It is an improved version of Enumeration with the additional functionality of removing an element.
+Iterator must be used whenever we want to enumerate elements in all Collection framework implemented interfaces like Set, List, Queue, Deque, and all implemented classes of Map interface. Iterator is the only cursor available for the entire collection framework.
+Iterator object can be created by calling iterator() method present in Collection interface.
+Syntax:
+Iterator itr = c.iterator();
+ ** Here “c” is any Collection object. itr is of type Iterator interface and refers to “c”.
+Methods of Iterator Interface in Java
+
+Iterator interface defines three methods as listed below:
+1. hasNext(): Returns true if the iteration has more elements.
+    public boolean hasNext();
+2. next(): Returns the next element in the iteration. It throws NoSuchElementException if no more element is present.
+    public Object next();
+3. remove(): Removes the next element in the iteration. This method can be called only once per call to next().
+    public void remove();
