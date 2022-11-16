@@ -1,0 +1,27 @@
+----------Vector Class---------------
+The Vector class implements a growable array of objects. Vectors fall in legacy classes, but now it is fully compatible with collections. 
+It is found in java.util package and implement the List interface, so we can use all the methods of the List interface as shown below as follows:
+--Vector implements a dynamic array which means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index.
+
+--They are very similar to ArrayList, but Vector is synchronized and has some legacy methods that the collection framework does not contain.
+
+--It also maintains an insertion order like an ArrayList. Still, it is rarely used in a non-thread environment as it is synchronized, and due to this,
+  it gives a poor performance in adding, searching, deleting, and updating its elements.
+  
+--The Iterators returned by the Vector class are fail-fast. In the case of concurrent modification, it fails and throws the ConcurrentModificationException.
+
+Constructors
+1. Vector(): Creates a default vector of the initial capacity is 10.
+
+Vector<E> v = new Vector<E>();
+2. Vector(int size): Creates a vector whose initial capacity is specified by size.
+
+Vector<E> v = new Vector<E>(int size);
+3. Vector(int size, int incr): Creates a vector whose initial capacity is specified by size and increment is specified by incr. It specifies the number of elements to allocate each time a vector is resized upward.
+
+Vector<E> v = new Vector<E>(int size, int incr);
+4. Vector(Collection c): Creates a vector that contains the elements of collection c.
+
+Methods-(some of many methods)
+add(E e)	--Appends the specified element to the end of this Vector.
+add(int index, E element)--	Inserts the specified element at the specified position in this Vector.
