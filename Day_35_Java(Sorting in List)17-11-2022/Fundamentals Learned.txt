@@ -8,3 +8,12 @@ The Vector class is deprecated since Java 5.
 
 List Interface declaration
   public interface List<E> extends Collection<E>  
+ -- Some Inbuilt Methods are--
+void add(int index, E element)-> It is used to insert the specified element at the specified position in a list.
+boolean add(E e)-> It is used to append the specified element at the end of a list.
+boolean addAll(Collection<? extends E> c)-> 	It is used to append all of the elements in the specified collection to the end of a list.
+boolean addAll(int index, Collection<? extends E> c)->	It is used to append all the elements in the specified collection, starting at the specified position of the list.
+void clear()-> 	It is used to remove all of the elements from this list.
+boolean equals(Object o)->	It is used to compare the specified object with the elements of a list.
+E get(int index)->	It is used to fetch the element from the particular position of the list.
+boolean isEmpty()->	It returns true if the list is empty, otherwise false.
