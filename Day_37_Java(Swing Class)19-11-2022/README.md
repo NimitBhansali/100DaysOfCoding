@@ -1,2 +1,3 @@
-<h2>OUTPUT</h2>
+<b>OUTPUT--</b>
+<br>
 ![not found](output.png)
