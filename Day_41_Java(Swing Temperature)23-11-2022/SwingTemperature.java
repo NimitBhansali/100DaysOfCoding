@@ -1,3 +1,4 @@
+//Program- To Design a Frame with Swing components for converting Celsius to fahrenheit.
 import java.awt.event.*;
 import javax.swing.*;
 class SwingTemperature extends JFrame implements ActionListener
