@@ -54,6 +54,7 @@ public class ListHackerRank {
      
     }
 }
+
 // Sample Input-
   // 5
   // 12 0 1 78 12
