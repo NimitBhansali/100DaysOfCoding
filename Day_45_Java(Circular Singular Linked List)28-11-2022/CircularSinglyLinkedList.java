@@ -1,4 +1,4 @@
-//Implement Linked List with all methods in menu driven form.
+//Implement Circular Singly Linked List with all methods in menu driven form.
 import java.util.*;
 class CircularSinglyLinkedList{
     //Creating a node
