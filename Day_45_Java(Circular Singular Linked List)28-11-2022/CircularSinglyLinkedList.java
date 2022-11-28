@@ -27,6 +27,27 @@ class CircularSinglyLinkedList{
         newNode.next= head;
         head=newNode;    
     }
+    //---------------Adding node at Specific-----------------
+    public void addSpecific(int data,Scanner sc){
+        if(head==null){
+            System.out.println("Can not insert element as list is empty,use method- insert at beginning ");
+            return;
+        }
+        Node newNode=new Node(data);
+        System.out.println("Enter Location after which to insert" );
+        int pos=sc.nextInt();
+        Node temp=head;
+        for(int i=1;i<pos;i++){
+            temp=temp.next;
+            if(temp==null){
+                System.out.println("Can not insert at that position ");
+                return;
+            }
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+    }
+
     //---------------Adding node at last-----------------
     public void addLast(int data){
         Node newNode= new Node(data);   //creating a new node 
@@ -61,7 +82,29 @@ class CircularSinglyLinkedList{
         lastNode.next=head.next;
         head=lastNode.next;
     }
-   
+    //---------------Deleting node at Specified-----------------
+    public void deleteSpecified(Scanner sc){
+        if(head==null){
+            System.out.println("Empty List can not delete");
+            return;
+        }
+        System.out.println("Enter position at which to delete");
+        int pos=sc.nextInt();
+        if(pos==1){
+            System.out.println("Use Delete at beginning method to delete first");
+            return;
+        }
+        Node temp=head,temp1=null;
+        for(int i=1;i<pos;i++){
+            temp1=temp;
+            temp=temp.next;
+            if(temp==null){
+                System.out.println("Can not delete at that position ");
+                return;
+            }
+        }
+        temp1.next=temp.next;
+    }
     //---------------Deleting node at last-----------------
     public void deleteLast(){
         if(head==null){
@@ -140,7 +183,7 @@ class CircularSinglyLinkedList{
         int ch;
         
         do{
-            System.out.println("\n Enter Choice:\n1. Print List\n2. Add in beginning\n3. Add at last\n4. Delete from Beginning\n5. Delete at last\n6. Search \n7. Exit");
+            System.out.println("\n Enter Choice:\n1. Print List\n2. Add in beginning\n3. Add at last\n4. Delete from Beginning\n5. Delete at last\n6. Search \n7. Add at Specific\n8. Delete at Specific \n9. Exit");
             ch=sc.nextInt();
             switch(ch){
                 case 1 : Clist.printList();
@@ -159,12 +202,18 @@ class CircularSinglyLinkedList{
                          break;
                 case 6 : Clist.search(sc);
                          break;
-                case 7 : System.exit(0);
+                case 7 : System.out.println("Enter data-");
+                         int z = sc.nextInt();
+                         Clist.addSpecific(z, sc);
+                         break;
+                case 8 : Clist.deleteSpecified(sc);
+                         break;
+                case 9 : System.exit(0);
                          break;
                 default : System.out.println("Wrong choice choose again"); 
             }
         }
-        while(ch!=7);
+        while(ch!=9);
         sc.close();
     }
 }
