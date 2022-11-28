@@ -21,6 +21,28 @@ class JavaLinkedList{
         newNode.next= head;
         head=newNode;    
     }
+
+    //---------------Adding node at Specified-----------------
+    public void addSpecified(int data,Scanner sc){
+        if(head==null){
+            System.out.println("Can not insert element as list is empty,use method- insert at beginning ");
+            return;
+        }
+        Node newNode=new Node(data);
+        System.out.println("Enter Location after which to insert" );
+        int pos=sc.nextInt();
+        Node temp=head;
+        for(int i=1;i<pos;i++){
+            temp=temp.next;
+            if(temp==null){
+                System.out.println("Can not insert at that position ");
+                return;
+            }
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+    }
+
     //---------------Adding node at last-----------------
     public void addLast(int data){
         Node newNode= new Node(data);   //creating a new node 
@@ -43,7 +65,26 @@ class JavaLinkedList{
         }
         head=head.next;
     }
-   
+    //---------------Deleting node at Specified-----------------
+    public void deleteSpecified(Scanner sc){
+        if(head==null){
+            System.out.println("Empty List can not delete");
+            return;
+        }
+        System.out.println("Enter position at which to delete");
+        int pos=sc.nextInt();
+        Node temp=head,temp1=null;
+        for(int i=1;i<pos;i++){
+            temp1=temp;
+            temp=temp.next;
+            if(temp==null){
+                System.out.println("Can not delete at that position ");
+                return;
+            }
+        }
+        temp1.next=temp.next;
+    }
+
     //---------------Deleting node at last-----------------
     public void deleteLast(){
         if(head==null){
@@ -62,7 +103,32 @@ class JavaLinkedList{
         }
         secondLastNode.next=null;   
     }
-        
+    public void search(Scanner sc){
+        Node temp=head;
+        int item,i=0,flag=0;
+        if(head==null){
+            System.out.println("Empty List can not search");
+        }
+        else{
+            System.out.println("Enter element to search-");
+            item = sc.nextInt();
+            while(temp!=null){
+                if(temp.data==item){
+                    System.out.println("Element found at position "+(i+1));
+                    flag=1;
+                    break;
+                }
+                else{
+                    flag=0;
+                }
+                i++;
+                temp=temp.next;
+            }
+            if(flag==0){
+                System.out.println("Element not found in list");
+            }
+        }
+    }
     //---------------Printing list-----------------------
     public void printList(){
         if(head==null){
@@ -85,7 +151,7 @@ class JavaLinkedList{
         int ch;
         
         do{
-            System.out.println("\nEnter Choice:\n1.Print List\n2.Add in beginning\n3.Add at last\n4.Delete from Beginning\n5.Delete at last\n6. Exit");
+            System.out.println("\nEnter Choice:\n1. Print List\n2. Add in beginning\n3. Add at last\n4. Delete from Beginning\n5. Delete at last\n6. Search\n7. Add at specified location\n8 Delete Specified\n9. Exit");
             ch=sc.nextInt();
             switch(ch){
                 case 1 : list.printList();
@@ -102,12 +168,20 @@ class JavaLinkedList{
                          break;
                 case 5 : list.deleteLast();
                          break;
-                case 6:  System.exit(0);
+                case 6 : list.search(sc);
+                         break;
+                case 7 : System.out.println("Enter data-");
+                         int z = sc.nextInt();
+                         list.addSpecified(z, sc);
+                         break;
+                case 8 : list.deleteSpecified(sc);
+                         break;
+                case 9:  System.exit(0);
                          break;
                 default : System.out.println("Wrong choice choose again"); 
             }
         }
-        while(ch!=6);
+        while(ch!=9);
         sc.close();
     }
 }
