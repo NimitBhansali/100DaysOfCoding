@@ -104,6 +104,35 @@ class JavaDoublyLinkedList{
         }
         secondLastNode.prev.next=null;   
     }
+
+    //--------------Searching an Element------------
+    public void search(Scanner sc){
+        if(head==null){
+            System.out.println("Empty list can not search");
+            return;
+        }
+        else{
+            Node temp=head;
+            int item,flag=0,i=0;
+            System.out.println("Enter Element to be searched ");
+            item=sc.nextInt();
+            while(temp!=null){
+                if(temp.data==item){
+                    System.out.println("Element found at position "+(i+1));
+                    flag=1;
+                    break;
+                }
+                else{
+                    flag=0;
+                }
+                i++;
+                temp=temp.next;
+            }
+            if(flag==0){
+                System.out.println("Element not found");
+            }
+        }
+    }
         
     //---------------Printing list-----------------------
     public void printList(){
@@ -128,7 +157,7 @@ class JavaDoublyLinkedList{
         int ch;
         
         do{
-            System.out.println("\nEnter Choice:\n1.Print List\n2.Add in beginning\n3.Add at last\n4.Delete from Beginning\n5.Delete at last\n6.Add at Specific\n7.Delete after specific\n8.Exit");
+            System.out.println("\nEnter Choice:\n1. Print List\n2. Add in beginning\n3. Add at last\n4. Delete from Beginning\n5. Delete at last\n6. Add at Specific\n7. Delete after specific\n8. Search\n9.Exit");
             ch=sc.nextInt();
             switch(ch){
                 case 1 : Dlist.printList();
@@ -156,12 +185,14 @@ class JavaDoublyLinkedList{
                          int pos1 = sc.nextInt();
                          Dlist.delSpecific(pos1);
                          break;
-                case 8:  System.exit(0);
+                case 8 : Dlist.search(sc);
+                         break;
+                case 9:  System.exit(0);
                          break;
                 default : System.out.println(" Wrong choice choose again "); 
             }
         }
-        while(ch!=8);
+        while(ch!=9);
         sc.close();
     }
 }
