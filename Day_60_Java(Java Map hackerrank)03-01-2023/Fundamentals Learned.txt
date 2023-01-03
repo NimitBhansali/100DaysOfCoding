@@ -1,0 +1,11 @@
+Java HashMap
+
+Java HashMap class implements the Map interface which allows us to store key and value pair, where keys should be unique. If you try to insert the duplicate key, it will replace the element of the corresponding key. It is easy to perform operations using the key index like updation, deletion, etc. HashMap class is found in the java.util package.
+
+HashMap in Java is like the legacy Hashtable class, but it is not synchronized. It allows us to store the null elements as well, but there should be only one null key. Since Java 5, it is denoted as HashMap<K,V>, where K stands for key and V for value. It inherits the AbstractMap class and implements the Map interface.
+
+HashMap class Parameters
+Let's see the Parameters for java.util.HashMap class.
+
+K: It is the type of keys maintained by this map.
+V: It is the type of mapped values.
