@@ -1,0 +1,14 @@
+Singleton pattern
+In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to a singular instance. One of the well-known "Gang of Four" design patterns, which describe how to solve recurring problems in object-oriented software,[1] the pattern is useful when exactly one object is needed to coordinate actions across a system.
+
+More specifically, the singleton pattern allows objects to:[2]
+
+Ensure they only have one instance
+Provide easy access to that instance
+Control their instantiation (for example, hiding the constructors of a class)
+
+Singletons are often preferred to global variables because they do not pollute the global namespace (or their containing namespace). Additionally, they permit lazy allocation and initialization, whereas global variables in many languages will always consume resources.
+
+The singleton pattern can also be used as a basis for other design patterns, such as the abstract factory, factory method, builder and prototype patterns. Facade objects are also often singletons because only one facade object is required.
+
+Logging is a common real-world use case for singletons, because all objects that wish to log messages require a uniform point of access and conceptually write to a single source.
