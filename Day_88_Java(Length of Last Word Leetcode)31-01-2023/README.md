@@ -4,7 +4,7 @@
 A word is a maximal 
 substring consisting of non-space characters only.
  
- Example 3:
+ Example 1:
  
 Input: s = "luffy is still joyboy"
 <br>Output: 6
